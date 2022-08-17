@@ -8,11 +8,8 @@ import pandas as pd
 import numpy as np
 import opendatasets as od
 import os
-<<<<<<< HEAD
 import re
 from datetime import datetime
-=======
->>>>>>> 70c7ed655e1ec700743f9cb1646bce53be503760
 
 import warnings
 warnings.filterwarnings("ignore")
@@ -120,18 +117,13 @@ def pull_data():
     print('Olympic data pulled')
 
     #. To copy and paste in jupyter notebook
-<<<<<<< HEAD
 # bio = pd.read_csv('clean_olympic_athlete_bio.csv')
-=======
-# bio = pd.read_csv('Olympic_Athlete_Bio.csv')
->>>>>>> 70c7ed655e1ec700743f9cb1646bce53be503760
 # er = pd.read_csv('Olympic_Athlete_Event_Results.csv')
 # res = pd.read_csv('Olympic_Results.csv')
 # country = pd.read_csv('Olympics_country.csv')
 # games = pd.read_csv('Olympics_Games.csv')
 # mt = pd.read_csv('Olympic_Games_Medal_Tally.csv')
 
-<<<<<<< HEAD
 # - Replace null values in all columns to 'na'
 # - Convert all string date values to date objects (dd MONTH_String yyyy or just yyyy) to yyyy-mm-dd
 
@@ -168,13 +160,6 @@ def merge_data(bio, er, res, country, games):
     olympics=pd.merge(bio, er[['edition','sport', 'event', 'result_id','medal', 'isTeamSport', 'athlete_id']], on ='athlete_id', how='left')
     # Merge olypics and results infromation - Not using As medals are focus area
     #olympics=pd.merge(olympics,res[['result_participants','result_id']], on='result_id', how='left')
-=======
-def merge_data(bio, er, res, country, games):
-    # merge bio and event results
-    olympics=pd.merge(bio, er[['edition','sport', 'event', 'result_id','medal', 'isTeamSport', 'athlete_id']], on ='athlete_id', how='left')
-    # Merge olypics and results infromation
-    olympics=pd.merge(olympics,res[['result_participants','result_id']], on='result_id', how='left')
->>>>>>> 70c7ed655e1ec700743f9cb1646bce53be503760
     # mergeolympics and games information
     olympics=pd.merge(olympics,games[['year', 'city','edition','country_noc']], on='edition', how='left')
     #Join country code of Host country
@@ -182,7 +167,6 @@ def merge_data(bio, er, res, country, games):
     #olympics.join(games.set_index(['country_noc','country']). on=['country_noc', 'country_noc_y'], how='left')
     print("Use df: 'olympics'")
     return olympics
-<<<<<<< HEAD
 
 def wrangle_olympics(df):
     
@@ -818,5 +802,3 @@ def height_weight_age_data(df):
     olympics = olympics.drop(['born','year_born'], axis=1)
     
     return olympics
-=======
->>>>>>> 70c7ed655e1ec700743f9cb1646bce53be503760
