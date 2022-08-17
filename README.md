@@ -3,6 +3,9 @@
 
 ![image.png](attachment:image.png)
 
+### Description
+120 years of olympic data was pull.  Athletic information and event data is merged with medalist data to identify if athletes are able to medal in the games.  Based on the data provided by these datasets, the goal of this project is to find if there is a better way to predict if an athlete will medal.
+
 <hr style="background-color:silver;height:3px;" />
 
 ## Project Summary
@@ -19,6 +22,11 @@
 >  - Data acquisition and preparation 
 >  - exploratory analysis 
 
+### Initial Hypothesis & Predictions
+> - 1. Host country is a factor in medaling
+> - 2. Team Sports have more medalists than individual events
+> - 3. Overall BMI will not have effect on medaling
+> - 4. Age will have an effect on medaling
 
 ### Specific requirements to document
 > - Data Acquisition: Data was pulled from Kaggle, originally scrapped from Olympics.com website
