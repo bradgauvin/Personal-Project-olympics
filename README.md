@@ -1,6 +1,7 @@
 # Person Project: Olympic medalist predictions
 *Audience: Target audience for my final report is a Codeup Data Science Students
 
+![image.png](attachment:image.png)
 
 <hr style="background-color:silver;height:3px;" />
 
@@ -62,28 +63,31 @@
 
 | Variable                       | Definition                                         | Data Type |
 |:-------------------------------|:--------------------------------------------------:|:---------:|
-| acres                          | grouped bins, based upon lot square footage        | category  |
-| age                            | grouped bins, based upon year built.               | category  |
-| assessed_value                 | total tax assessed value of the property           | float64   |
-| bathroom_bins                  | grouped bins, based upon number of bedrooms        | category  |
-| bathrooms                      | number of bathrooms and half-bathrooms in home     | float64   |
-| bedroom_bins                   | grouped bins, based upon number of bedrooms        | category  |
-| bedrooms                       | number of bedrooms in the home                     | float64   |
-| county_code_bin                | name of county as assigned by state_county_code    | category  |
-| county_code_bin_Orange County  | numeric variable representing county_code_bin      | uint8     |
-| county_code_bin_Ventura County | numeric variable representing county_code_bin      | uint8     |
-| latitude                       | Latitude of the middle of the parcel multiplied by 10e6  | category  |
-| logerror                       | Residual Error in Home Valuation                   | float64   |
-| longitude                      | Longitude of the middle of the parcel multiplied by 10e6 | category  |
-| home_sizes                     | grouped bins, based upon square footage            | category  |
-| square_feet                    | total finished living area of the home             | float64   |
-| state_county_code              | federal information processing standards code      | object    |
-| total_rooms                    | combined number of bedrooms and bathrooms          | float64   |
-| year_built                     | year the primary residence was constructed         | int64     |
+| athlete ID                          | unique identifier for athletes       | category  |
+| Name                          | name of athlete             | str |
+| sex                 | gender          | str   |
+| height                  | height in cm        | float64 |
+| weight                   | weight in kg    | float64   |
+| born                   | date of birth (year) - deleted       | int |
+| country                      | home country of athlete                    | string   |
+| country_noc_x               |country code of athlete   | string  |
+| edition  | summer/winter olympics     | string    |
+| sport | sport name     | string    |
+| result_id                       | key variable for events  | category  |
+| medal                      | participant, bronze, silver, gold medalist                   | string   |
+| isTeamSport                      | 1 is team sport, 0 is individual sport | category  |
+| city                    | city of olympic event           | string  |
+| country_noc_y                   | country code for olympic event             | string   |
+| event year             | year of olympics      | int   |
+| medalist                   | did athlete medal: 1 = yes, 0= no          | int64   |
+| home                   | is althete from host country: 1=yes, 0 =no        | int64     |
+| age                  | approximate age of athlete at time of games         | float64   |
+| bmi                   | height times weight multiplied by 10000       | int    |
+
 
 |Target Variable                 | Definition                                         | Data Type|
 |:-------------------------------|:--------------------------------------------------:|:---------:|
-|logerror                        | Residual Error in Home Valuation                   |           |
+|medalist                       | did athlete medal: 1 = yes, 0= no                    |           |
 <hr style="background-color:silver;height:3px;" />
 
 ## Reproducing this project
@@ -91,6 +95,11 @@
 
 > In order to reproduce this project you will need your own environment file and access to the database. You can reproduce this project with the following steps:
 > - Read this README
+> - need to download '!pip install opendatasets'
+> - Acquire, Modeling, Utilities, and Wrangel_o files in .py format from the repo
+> - Need Kaggle api token or you will be asked for kaggle login information
+>    - ![image.png](attachment:image.png)
+> - For information on kaggle api visit this [link](https://www.analyticsvidhya.com/blog/2021/04/how-to-download-kaggle-datasets-using-jupyter-notebook/ "how to download kaggle dataset using jupyter notebook")
 > - Clone the repository or download all files into your working directory
 > - Add your environment file to your working directory:
 >  - filename should be env.py
@@ -102,7 +111,7 @@
 <details>
   <summary><i>Click to expand</i></summary>
   <ul>
-   <li><b>Acquire</b> data from XXXX</li>
+   <li><b>Acquire</b> data from Kaggle</li>
     <li>Clean and <b>prepare</b>data for the exploration. </li>
     <li>Create wrangle.py to store functions I created to automate the cleaning and preparation process.</li>
     <li>Separate train, validate, test subsets and scaled data.</li>
