@@ -21,7 +21,11 @@
 > - This README file
 >  - Data acquisition and preparation 
 >  - exploratory analysis 
-
+> - Trell board was used for project updates
+> - Tableau was used for some visuals
+  - [Link to Tableau dashboard](https://public.tableau.com/views/OlympicCountrySport/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link)
+  - [Link to Trello](https://trello.com/invite/b/MKjYvF4Y/a2ff8f44b2213759036f8c0ef947ea80/personal-project)
+ 
 ### Initial Hypothesis & Predictions
 > - 1. Host country is a factor in medaling
 > - 2. Team Sports have more medalists than individual events
