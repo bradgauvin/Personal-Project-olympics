@@ -774,6 +774,9 @@ def height_weight_age_data(df):
     olympics = df
     # Remove White Space
     olympics.weight = olympics.weight.str.rstrip()
+    # Conver 'na' to NaN
+    olympics.height = olympics.height.replace('na',np.NaN)
+    olympics.weight = olympics.weight.replace('na',np.NaN)
     # Convert Height/Weight to numeric
     olympics['height']=pd.to_numeric(olympics['height'])
     olympics['weight']=pd.to_numeric(olympics['weight'])
